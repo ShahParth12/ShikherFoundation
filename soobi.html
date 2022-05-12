@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+
+        <div class="shikher">
+
+            <img src="Shikher Foundations Logo 2021.png">
+
+        </div>
+        <nav class="main-nav">
+            <ul>
+
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About </a></li>
+                <li><a href="donate.html">Donate </a></li>
+                <li><a href="volunteer.html">Volunteer </a></li>
+                <li><a href="events.html">Events </a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="flexbox">
+
+        <div class="info" id="donationinfo">
+            <h4>DONATION</h4>
+            <p>We want your support by gathering your unused items from your home and office which you will scrap not to
+                ever use aagain. This may be scrap for you but can be new for someone in need.</p>
+            <p>This donation will help to fulfill the basic needs of the under privileged people and donations help
+                sustain
+                our organization. This will also benefit the community which we serve and together we can bring smile on
+                a
+                lot of people's faces. </p>
+            <p>Since our inception we have received donation from 1000+ donors.</p>
+        </div>
+
+        <div class="info" id="items">
+            <h5>What can be donated?</h5>
+            <p>List of things which can be donated:</p>
+            <ul>
+                <li>All standard college/school/technical education/old books</li>
+                <li>Novels & Story books</li>
+                <li>Blank note books, register, bill book etc</li>
+                <li>News Papers & Stationery</li>
+                <li>Used Laptops, Computers & any electronic parts</li>
+                <li>Used Sewing Machine & any used electronic appliances</li>
+                <li>Used watter bottles, tiffin box, compass box, school bag/ officebag/ travel bag</li>
+                <li>Old clothes/ Uniforms</li>
+                <li>Any scrap</li>
+            </ul>
+
+        </div>
+                    <br>
+                    <span class="details">Full Name</span>
+                    <br>
+                    <input id="fullname" type="text" placeholder="Enter your Full Name" required>
+                    <br>    
+            
+                    <span class="details">Email Id</span>
+                    <br>
+                    <input id="email" type="email" placeholder="Enter your Email id" required>
+
+                    <br>    
+                    <span class="details">Phone Number</span>
+                    <br>    
+                    <input id ="phno" type="text" placeholder="Enter your number" required>
+               
+                    <br>    
+                    <span class="details">Address</span>
+                    <br>
+                    <input id="addr" type="text" placeholder="Flat no, Apartment Name, Landmark, Area, City, Pincode ." required>
+ 
+                    <br>
+                    <span class="details">Things you will be donating</span>
+                    <br>
+                    <input id="things" type="text" placeholder="eg- Note Books, News Paper, Stationery, School Bag etc." required>
+                
+                    <br>
+                    <span class="details">Number of bags</span>
+                    <br>
+                    <input id ="nob"type="number" required>
+                    <br>
+                
+
+                   <button id="senddata">DONATE NOW</button>
+
+
+    <footer class="footer">
+        <div class="fcontainer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+        import  {getDatabase , ref , set , child , update ,remove} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCdTLLg3U72vWU3V6PnaYW8WN9y2rw70Ns",
+            authDomain: "shikher-foundations.firebaseapp.com",
+            databaseURL: "https://shikher-foundations-default-rtdb.firebaseio.com",
+            projectId: "shikher-foundations",
+            storageBucket: "shikher-foundations.appspot.com",
+            messagingSenderId: "48520475587",
+            appId: "1:48520475587:web:5941f4e0dc88e000378376"
+          };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db= getDatabase();
+
+        var fullname = document.getElementById("fullname");
+        var email = document.getElementById("email");
+        var phoneno = document.getElementById("phno");
+        var address = document.getElementById("addr");
+        var donate = document.getElementById("things");
+        var nob = document.getElementById("nob");
+
+
+        var sendbtn = document.getElementById("senddata");
+
+        function send(){
+            set(ref(db,"Donations/"+fullname.value ) ,{
+              Name : fullname.value,
+              Email_id: email.value,
+              phone_number : phoneno.value ,
+              Address : address.value ,
+              Items_donated : donate.value,
+              Number_of_bags : nob.value
+            })
+            .then(()=>{
+              alert("data added succesfully");
+            })
+            .catch((error)=>{
+              alert("unsuccesful , error" + error);
+            });
+          }
+          sendbtn.addEventListener('click',send);
+    </script>
+
+</body>
+
+</html>
