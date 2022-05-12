@@ -4,10 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Volunteer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="navbar">
@@ -24,62 +22,43 @@
                     <li><a href="about.html">About </a></li>
                     <li><a href="donate.html">Donate </a></li>
                     <li><a href="volunteer.html">Volunteer </a></li>
-                    <li><a href="events.html">Events </a></li>
-                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Events </a></li>
+                    <li><a href="#">Shop</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
     
-        <form>
-            <div class="Sign-Up">
-            <h1>Sign Up</h1>
-
-            <div class="fill-form"> 
             <h3>PLEASE FILL THIS FORM TO VOLUNTEER</h3>
             <hr />
             <div class="details">
             <label>Name</label>
-            <input type="text" class="input-box" placeholder="Full Name" />
+            <input id ="fullname" type="text" class="input-box" placeholder="Full Name" />
             <br />
             
             <label>Contact Number</label>
-            <input type="tel" class="input-box" placeholder="0123456789" size="10"/>
+            <input id ="conno" type="tel" class="input-box" placeholder="0123456789" size="10"/>
             <br />
             <label>Address</label>
-            <input type="text" class="input-box" placeholder="Residential Address" />
-            <br />
-            <label>Qualification</label>
-            <input type="image" class="input-box" placeholder="Upload report card of your latest qualification" />
+            <input id ="addr" type="text" class="input-box" placeholder="Residential Address" />
             <br />
             <label>Date of Birth</label>
-            <input type="date" class="input-box" placeholder="DD/MM/YYYY" />
+            <input id ="dob" type="date" class="input-box" placeholder="DD/MM/YYYY" />
             <br />
             <label>Why do you wish to volunteer here?</label>
-            <input type="text" class="input-box" placeholder="State your reason to volunteer here" />
-            <br />
-            <label>Email Id</label>
-            <input type="email" class="input-box" placeholder="Email" />
-            <br />
-            <label>Password</label>
-            <input type="password" class="input-box" placeholder="Set a 6-digit password" size="6" />
-            <br />
-            <label>Confirm Password</label>
-            <input type="password" class="input-box" placeholder="Confirm Password" size="6" />
+            <input id="volinfo" type="text" class="input-box" placeholder="State your reason to volunteer here" />
             <br />
             <label>Have you volunteered at any other Foundation or NGO?</label>
             <br />
-            <label>YES</label>
-            <input type="checkbox" value="Yes" />
+            <select id="prevvol">
+                <option value="yes">YES</option>
+                <option value="no">NO</option>
+            </select>
             <br />
-            <label>NO</label>
-            <input type="checkbox" value="No" />
-            <br />
-            <button>Sign Up</button>
-
+            <button id ="sendbtn">Volunteer</button>
+            
+            <script type = "module" src = "../js/volunteer.js"></script>
                 
-                
-            </form>
-        </div>
+    
     </body>
 </html>
